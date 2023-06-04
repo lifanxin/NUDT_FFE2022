@@ -24,10 +24,10 @@ class DataCleaner():
                 if data["application_name"] in protocols:
                     continue
                 # 清除无用流
-                bi_pks = int(line["bidirectional_packets"])
+                bi_pks = int(data["bidirectional_packets"])
                 if bi_pks == 1:
                     continue
-                bi_bytes = int(line["bidirectional_bytes"])
+                bi_bytes = int(data["bidirectional_bytes"])
                 if bi_bytes == 0:
                     continue
                 new_d_list.append(data)
